@@ -5,12 +5,37 @@ public class Enemy : MonoBehaviour
 {
 public float speed = 10f;
 
+public int health = 100;
+
+public int value = 50;
+
+public GameObject deathEffect;
+
 private Transform target;
 
 private int waypointIndex = 0;
 
 void Start() {
     target = Wapyoints.points[0];
+}
+
+public void takeDamage(int amount)
+{
+    health -= amount;
+    if (health <= 0)
+    {   
+      
+        Die();
+    }
+}
+
+void Die()
+{
+    GameObject deathParticles = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+    Destroy(deathParticles, 2f);
+    Destroy(gameObject);
+    
+    PlayerStats.money += value;
 }
 
 void Update() {
@@ -24,10 +49,16 @@ void Update() {
 
 private void GetNextWaypoint(){
     if(waypointIndex >= Wapyoints.points.Length - 1) {
-        Destroy(gameObject);
+        EndPath();
         return;
     }
     waypointIndex++;
     target = Wapyoints.points[waypointIndex];
+}
+
+private void EndPath()
+{
+    PlayerStats.lives --;
+        Destroy(gameObject);
 }
 }

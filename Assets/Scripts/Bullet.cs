@@ -11,6 +11,8 @@ public float speed = 50f;
 
 public float explosionRadius = 0f;
 
+public int damage = 50;
+
  public void Seek(Transform _target) 
  {
     target = _target;
@@ -69,7 +71,17 @@ public float explosionRadius = 0f;
 
     void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Enemy e = enemy.GetComponent<Enemy>();
+        if (e != null)
+        {
+             e.takeDamage(damage);
+        }
+        else 
+        {
+            Debug.LogError("Pas de script Ennemy sur l'ennemi");
+        }
+       
+
     }
 
     private void OnDrawGizmosSelected()

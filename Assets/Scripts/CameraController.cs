@@ -14,6 +14,12 @@ public float maxY = 60f;
 
 void Update () {
 
+    if (GameManager.gameIsOver)
+    {
+        this.enabled = false;
+        return;
+    }
+
     if (Input.GetKeyDown(KeyCode.P))
     {
         canMove = !canMove;

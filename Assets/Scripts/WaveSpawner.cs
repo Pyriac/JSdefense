@@ -29,6 +29,7 @@ private int waveIndex = 0;
 
     IEnumerator SpawnWave(){
      waveIndex++;
+     PlayerStats.rounds++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
