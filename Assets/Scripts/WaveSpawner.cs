@@ -16,7 +16,7 @@ public static int EnemiesAlive = 0;
 private int waveIndex = 0;
     void Update()
     {
-        if (EnemiesAlive >0)
+        if (EnemiesAlive > 0)
         {
             return;
         }
