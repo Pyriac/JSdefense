@@ -14,4 +14,9 @@ public class Shop : MonoBehaviour
  {
     buildManager.setTurretToBuild(buildManager.standardTurretPrefab);
  }
+
+ public void PurchaseMissileLauncher()
+ {
+    buildManager.setTurretToBuild(buildManager.missileLauncherPrefab);
+ }
 }
