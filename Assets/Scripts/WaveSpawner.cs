@@ -3,7 +3,7 @@ using System.Collections;
 using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
-[SerializeField] private Transform enemyPrefab;
+public Wave[] waves;
 
 [SerializeField]  private float timeBetweenWaves = 6f;
 
@@ -12,13 +12,19 @@ public class WaveSpawner : MonoBehaviour
 [SerializeField] private TextMeshProUGUI waveCountdownTimer;
 
 private float countdown = 5f;
-
+public static int EnemiesAlive = 0;
 private int waveIndex = 0;
     void Update()
     {
+        if (EnemiesAlive >0)
+        {
+            return;
+        }
+
         if(countdown <= 0f){
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            return;
         }
 
         countdown -= Time.deltaTime;
@@ -28,17 +34,23 @@ private int waveIndex = 0;
     }
 
     IEnumerator SpawnWave(){
-     waveIndex++;
      PlayerStats.rounds++;
-        for (int i = 0; i < waveIndex; i++)
+
+     Wave wave = waves[waveIndex];
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1f / wave.rate);
         }
+         waveIndex++;
         
+        if(waveIndex == waves.Length){
+            this.enabled = false;
+        };
     }
     
-    void SpawnEnemy(){
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+    void SpawnEnemy(GameObject enemy){
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
     }
 }

@@ -34,7 +34,7 @@ void Die()
     GameObject deathParticles = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
     Destroy(deathParticles, 2f);
     Destroy(gameObject);
-    
+    WaveSpawner.EnemiesAlive--;
     PlayerStats.money += value;
 }
 
@@ -59,6 +59,8 @@ private void GetNextWaypoint(){
 private void EndPath()
 {
     PlayerStats.lives --;
+     WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
+   
 }
 }
