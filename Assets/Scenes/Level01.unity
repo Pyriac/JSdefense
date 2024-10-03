@@ -96,8 +96,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 69b885bb4cf1b1240b7a420343dd7212, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 76501ee492493414e88a0547fdae2cba, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13628,16 +13628,16 @@ MonoBehaviour:
   waves:
   - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
     count: 3
-    rate: 0.5
-  - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
-    count: 5
-    rate: 0.5
-  - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
-    count: 10
     rate: 1
   - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
-    count: 20
+    count: 5
     rate: 2
+  - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
+    count: 10
+    rate: 2
+  - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
+    count: 20
+    rate: 3
   - enemy: {fileID: 8925768412731324843, guid: 1011860345317084c9acaae29cc46620, type: 3}
     count: 50
     rate: 3

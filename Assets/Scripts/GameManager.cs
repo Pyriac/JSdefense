@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    public GameObject CompleteLevelUI;
     public static bool gameIsOver;
     public GameObject gameOverUI;
 
@@ -28,5 +28,11 @@ public class GameManager : MonoBehaviour
         gameIsOver = true;
        gameOverUI.SetActive(true);
        Time.timeScale = 0;
+    }
+
+    public void WinLevel()
+    {   
+        gameIsOver = true;
+        CompleteLevelUI.SetActive(true);
     }
 }

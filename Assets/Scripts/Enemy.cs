@@ -15,6 +15,8 @@ private Transform target;
 
 private int waypointIndex = 0;
 
+private bool isDead = false;
+
 void Start() {
     target = Wapyoints.points[0];
 }
@@ -22,7 +24,7 @@ void Start() {
 public void takeDamage(int amount)
 {
     health -= amount;
-    if (health <= 0)
+    if (health <= 0 && !isDead)
     {   
       
         Die();
@@ -31,6 +33,7 @@ public void takeDamage(int amount)
 
 void Die()
 {
+    isDead = true;
     GameObject deathParticles = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
     Destroy(deathParticles, 2f);
     Destroy(gameObject);

@@ -5,21 +5,31 @@ public class WaveSpawner : MonoBehaviour
 {
 public Wave[] waves;
 
+public GameManager gameManager;
+
 [SerializeField]  private float timeBetweenWaves = 6f;
 
 [SerializeField] private Transform spawnPoint;
 
 [SerializeField] private TextMeshProUGUI waveCountdownTimer;
 
-private float countdown = 5f;
+private float countdown;
 public static int EnemiesAlive = 0;
 private int waveIndex = 0;
+
+    void Start(){
+        countdown = 5f;
+    }
     void Update()
     {
         if (EnemiesAlive > 0)
         {
             return;
         }
+          if(waveIndex == waves.Length){
+            gameManager.WinLevel();
+            this.enabled = false;
+        };
 
         if(countdown <= 0f){
             StartCoroutine(SpawnWave());
@@ -44,9 +54,7 @@ private int waveIndex = 0;
         }
          waveIndex++;
         
-        if(waveIndex == waves.Length){
-            this.enabled = false;
-        };
+     
     }
     
     void SpawnEnemy(GameObject enemy){
