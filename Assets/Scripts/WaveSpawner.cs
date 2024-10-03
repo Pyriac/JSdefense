@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
 
 [SerializeField] private TextMeshProUGUI waveCountdownTimer;
 
-private float countdown = 2f;
+private float countdown = 5f;
 
 private int waveIndex = 0;
     void Update()
@@ -22,10 +22,9 @@ private int waveIndex = 0;
         }
 
         countdown -= Time.deltaTime;
-        waveCountdownTimer.text = Mathf.Floor(countdown).ToString();
-        if(countdown <= 1) {
-            waveCountdownTimer.text = "";
-        }
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
     }
 
     IEnumerator SpawnWave(){
