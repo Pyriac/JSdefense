@@ -7839,6 +7839,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3667904885997446798, guid: e19459512ed642144916dd0e0ef7452e, type: 3}
   m_PrefabInstance: {fileID: 1059709405}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1075298437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1075298438}
+  m_Layer: 0
+  m_Name: JsTurret
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1075298438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075298437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1078956047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18719,6 +18750,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2100273234}
     m_Modifications:
+    - target: {fileID: 517376574056492474, guid: 0f6b831087eb9d3428fcbe86147dc10e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e68561e10bc591147b3697acd32e1b21, type: 3}
     - target: {fileID: 701747632739316979, guid: 0f6b831087eb9d3428fcbe86147dc10e, type: 3}
       propertyPath: m_Name
       value: ShopTurretItem
@@ -18829,6 +18864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopMissileLauncherItem
       objectReference: {fileID: 0}
+    - target: {fileID: 5655242795735809899, guid: 53ca61870f1875f42a95fdbafbc62b5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ca59639559d9974695bb62af9ce4ab1, type: 3}
     - target: {fileID: 7693670857958257427, guid: 53ca61870f1875f42a95fdbafbc62b5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18935,3 +18974,4 @@ SceneRoots:
   - {fileID: 753522217}
   - {fileID: 1632661620}
   - {fileID: 643371867}
+  - {fileID: 1075298438}
