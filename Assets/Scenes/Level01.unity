@@ -8217,37 +8217,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3667904885997446798, guid: e19459512ed642144916dd0e0ef7452e, type: 3}
   m_PrefabInstance: {fileID: 1059709405}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1075298437
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1075298438}
-  m_Layer: 0
-  m_Name: JsTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1075298438
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075298437}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1078956047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15167,7 +15136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeUI: {fileID: 643371868}
   standardTurretPrefab: {fileID: 402313580137323350, guid: 94c97bb6514a4894ebefbbb1cb70e6db, type: 3}
-  missileLauncherPrefab: {fileID: 2946871244681424313, guid: 2eac9e61295ca1642ab7fce79a56c818, type: 3}
+  missileLauncherPrefab: {fileID: 7324816019516239260, guid: bc5a8312d98fad84d86d3eb944cedf2c, type: 3}
   buildEffect: {fileID: 6819527910785097695, guid: fb2e2d4a4bbc8414c97c1b1c8e531d56, type: 3}
   sellEffect: {fileID: 6505925838801328974, guid: 7183a7806941df542b261273dd4df72a, type: 3}
 --- !u!114 &1850074615
@@ -19113,12 +19082,12 @@ MonoBehaviour:
   standardTurret:
     prefab: {fileID: 402313580137323350, guid: 94c97bb6514a4894ebefbbb1cb70e6db, type: 3}
     cost: 100
-    upgradedPrefab: {fileID: 3033814242449652318, guid: 5826c6ea5999a3e4e8ee7aafaa2c1cf6, type: 3}
+    upgradedPrefab: {fileID: 7982811143530537781, guid: ddd84ecd9651fb941bf6a6a72272470f, type: 3}
     upgradeCost: 100
   missileLauncherTurret:
     prefab: {fileID: 7324816019516239260, guid: bc5a8312d98fad84d86d3eb944cedf2c, type: 3}
     cost: 250
-    upgradedPrefab: {fileID: 2946871244681424313, guid: 7f1f50232ecd58a4b98402a3153b822a, type: 3}
+    upgradedPrefab: {fileID: 5935179025703535335, guid: a36e9759cfd705a4288c15dee543b6c4, type: 3}
     upgradeCost: 150
 --- !u!1001 &2106477404
 PrefabInstance:
@@ -20051,5 +20020,4 @@ SceneRoots:
   - {fileID: 753522217}
   - {fileID: 1632661620}
   - {fileID: 643371867}
-  - {fileID: 1075298438}
   - {fileID: 2107616316}
