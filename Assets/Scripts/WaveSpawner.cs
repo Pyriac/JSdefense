@@ -21,6 +21,9 @@ public class WaveSpawner : MonoBehaviour {
     [SerializeField]
     private TextMeshProUGUI waveCountdownTimer;
 
+    [SerializeField]
+    private TextMeshProUGUI WaveCount;
+
     private int waveIndex = 0;
 
     private void Start()
@@ -51,8 +54,7 @@ public class WaveSpawner : MonoBehaviour {
         countdown -= Time.deltaTime;
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-
-        waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
+        waveCountdownTimer.text = "Prochaine vague : " + string.Format("{00:0.0}", countdown);
 
 	}
 
@@ -60,6 +62,7 @@ public class WaveSpawner : MonoBehaviour {
     {
         
         PlayerStats.rounds++;
+        WaveCount.text = "Vague " + PlayerStats.rounds.ToString();
 
         Wave wave = waves[waveIndex];
 

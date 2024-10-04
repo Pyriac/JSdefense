@@ -6,6 +6,6 @@ public class MoneyUI : MonoBehaviour
  public TextMeshProUGUI moneyText;
     void Update()
     {
-        moneyText.text = PlayerStats.money.ToString() + "Bcoin";
+        moneyText.text = PlayerStats.money.ToString() + " BCoin";
     }
 }
