@@ -30,7 +30,7 @@ void Update () {
         return;
     }
 
-    if(Input.GetKey(KeyCode.Z) || Input.mousePosition.y >= Screen.height - panBorder)
+    if(Input.GetKey(KeyCode.W) || Input.mousePosition.y >= Screen.height - panBorder)
     {
         transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
     }
@@ -38,7 +38,7 @@ void Update () {
     {
         transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
     }
-        if(Input.GetKey(KeyCode.Q) || Input.mousePosition.x <= panBorder)
+        if(Input.GetKey(KeyCode.A) || Input.mousePosition.x <= panBorder)
     {
         transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
     }
