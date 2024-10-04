@@ -4,14 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public TextMeshProUGUI roundsText;
+  public WaveSpawner waveSpawner;
+  public TextMeshProUGUI roundsText;
   void OnEnable() {
     roundsText.text = "Vous avez survécu " + (PlayerStats.rounds-1).ToString()  + " vagues.";
   }
 
   public void Retry() {
+      WaveSpawner.EnemiesAlive = 0;
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    Time.timeScale = 1f;
   }
 
   public void Menu() {
